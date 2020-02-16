@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-Do List</title>
+    <style>
+        .contents{
+            position: relative;
+            width: 500px;
+            height: 600px;
+            background:rgb(247, 247, 247);
+            top: 40px;
+            left: 500px;
+        } 
+        .div_todohead{
+            position: absolute;
+            width: 300px;
+            height: 100px;
+            background: rgb(247, 247, 247);
+            top: 40px;
+            left: 100px;
+            font-size: 40px;
+            color: grey;
+            margin: 5px;
+            text-align: center;
+        }
+        .div_todobody{
+            position: absolute;
+            width: 300px;
+            height: 400px;
+            top: 150px;
+            left: 100px;
+            text-align: center;
+            background: white;
+        }
+        .div_todobody{
+            position: absolute;
+            width: 300px;
+            height: 400px;
+            top: 150px;
+            left: 100px;
+            text-align: center;
+            background: white;
+        }
+        .inputbox{
+            position: relative;
+            top: 5%;
+        }
+        .restbtn{
+            position: relative;
+            top: 80%
+        }
+    </style>
+</head>
+<body style="background-color: rgb(234, 250, 203)">
+    <div class="contents">
+        <div class="div_todohead">
+            <div class="title">
+                To-Do List
+            </div>
+            
+        </div>
+
+    <div class="div_todobody">
+        <div class="inputbox">
+            <input type="text" id="taskinput" onkeydown="pressEnter()";>
+        </div>
+
+        <div class="listbox">
+            <ul id="inlist" >
+            </ul>
+        </div>
+            
+        <div class="restbtn">
+            <button id="edit" onclick="edit();">Edit</button>
+            <button id="del">Delete</button>
+        </div>
+        </div>
+    </div>
+
+    <script>
+        function pressEnter(){
+            var input=document.getElementById("taskinput").value;
+            var listadd=documet.createElement("li");listadd.innerHTML=input;
+            document.getElementById()
+
+        }
+
+        function edit(){
+
+        }
+
+        function del(){
+
+        }
+
+    </script>
+</body>
+</html>
