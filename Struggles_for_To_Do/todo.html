@@ -16,7 +16,12 @@
         
     }
     .todobody_ctr{
+        
         padding-top: 2rem;
+        text-align: center;
+        
+    }
+    .todobody_rw{
         
     }
     .div_list{
@@ -31,7 +36,12 @@
         color: rgb(51, 51, 51);
         
     }
+    .done-title{
+        padding-bottom: 10px;
+    }
+    .edit{
 
+    }
 </style>
 
 <body data-gr-c-s-loaded="true">
@@ -48,69 +58,42 @@
             <div class="todobody_ctr container">
                 <div class="todobody_rw row">
                     <div class="div_list col-md-5 text-left">
-                        <h3>LIST</h3>
+                        <h3 class="h3">List</h3>
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Add a task">
+                            <input type="text" class="form-control" placeholder="Add a task" onkeypress="addList()">
                             <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button">Button</button>
+                                <button class="btn btn-outline-secondary" type="button">Add</button>
                               </div>
                         </div>
                         <hr class="mb-4">
-                        <ul class="list-group list-group-flush-action.">
-                            <li href="#" class="list-group-item list-group-item-action">국립중앙박물관 전시회 가기</li>
-                            <li href="#" class="list-group-item list-group-item-action">도자기수업 신청</li>
-                            <li href="#" class="list-group-item list-group-item-action">스크롤바 만들기</li>
-                            <li href="#" class="list-group-item list-group-item-action">인풋정리</li>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><label><input type="checkbox">국립중앙 박물관 전시회</label><button class="edit">e</button><button class="delete">x</button></li>
+                            <li class="list-group-item"><label><input type="checkbox">도자기수업 신청</label><button class="edit">e</button><button class="delete">x</button></li> 
+                            <li class="list-group-item"><label><input type="checkbox">스크롤바 만들기</label><button class="edit">e</button><button class="delete">x</button></li>
                         </ul>
-
                     </div>
-                    
+                    <div class="div_blank col-md-2 text-right"></div>
                     <div class="div_done col-md-5 text-right">
                         <h3 class="done-title">DONE</h3>
                         <hr class="mb-4">
-                        <ul>
-                            <li href="#" class="list-group-item list-group-item-action">계산기 만들기</li>
-                            <li href="#" class="list-group-item list-group-item-action"></li>
-                            <li href="#" class="list-group-item list-group-item-action"> </li>
-                            <li href="#" class="list-group-item list-group-item-action"> </li>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group"><label><input type="checkbox">계산기 만들기</label><button class="edit">e</button><button class="delete">d</button></li>
                         </ul>
                     </div>
-                        
             </div>
-
-        </div>
-        <br>
-        <br>
-        <br>
-        <div class="editAndDel container">
-            <div class="row">
-                <div class="col-md-5"></div>
-                <button type="button" class="btn btn-outline-secondary col-md-1">E</button>
-                <button type="button" class="btn btn-outline-danger col-md-1">D</button>
-                <div class="col-md-5"></div>
-            </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
        <footer class="my-5 text-center">
         @random thing
        </footer>
         
 
     <script>
-        function pressEnter(){
-            var input=document.getElementById("taskinput").value;
-            var listadd=documet.createElement("li");listadd.innerHTML=input;
-            document.getElementById()
+        function 
 
+            
         }
 
         function edit(){
-
+            
         }
 
         function del(){
