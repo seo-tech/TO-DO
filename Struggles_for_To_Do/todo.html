@@ -6,9 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>To-Do List</title>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="data:text/css;charset=utf-8," data-href="../dist/css/bootstrap-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">
+    <link href="../assets/css/docs.min.css" rel="stylesheet">
 </head>
 
 <style>
+    body {
+        background: #fff;
+        color: #333;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
     .intro {
         padding-top: 3rem;
         padding-bottom: 2rem;
@@ -21,27 +28,29 @@
         text-align: center;
         
     }
-    .todobody_rw{
-        
-    }
+    
     .div_list{
         width: auto;
         height: 350px;
         color: rgb(51, 51, 51);
-       
     }
+
+    .list-group-item{
+        margin: 0;
+    }
+
+    .cb{
+        margin-right: 15px;
+    }
+
+
     .div_done{
         width: auto;
         height: 350px;
         color: rgb(51, 51, 51);
         
     }
-    .done-title{
-        padding-bottom: 10px;
-    }
-    .edit{
-
-    }
+    
 </style>
 
 <body data-gr-c-s-loaded="true">
@@ -57,27 +66,27 @@
             </div>
             <div class="todobody_ctr container">
                 <div class="todobody_rw row">
-                    <div class="div_list col-md-5 text-left">
-                        <h3 class="h3">List</h3>
+                    <div class="div_list col-md-6 text-left">
+                        <h3 class="h3">LIST</h3>
+                        <hr class="mb-4">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Add a task" onkeypress="addList()">
+                            <input type="text" id="inputTask" class="form-control" placeholder="Add a task">
                             <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button">Add</button>
+                                <button class="btn btn-outline-secondary" onclick="newTask()">Add</button>
                               </div>
                         </div>
-                        <hr class="mb-4">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><label><input type="checkbox">국립중앙 박물관 전시회</label><button class="edit">e</button><button class="delete">x</button></li>
-                            <li class="list-group-item"><label><input type="checkbox">도자기수업 신청</label><button class="edit">e</button><button class="delete">x</button></li> 
-                            <li class="list-group-item"><label><input type="checkbox">스크롤바 만들기</label><button class="edit">e</button><button class="delete">x</button></li>
+                    
+                        <ul id="Ul" class="list-group list-group-flush">
+                            <li class="list-group-item"><label><input type="checkbox" class="cb">국립중앙 박물관 전시회</label><span class="btn-group1"><button class="btn glyphicon glyphicon-search">E</button ><button class="btn glyphicon glyphicon-search">D</button></span></li>
+                            <li class="list-group-item"><label><input type="checkbox" class="cb">도자기수업 신청</label><span class="btn-group1"><button class="btn glyphicon glyphicon-search">E</button ><button class="btn glyphicon glyphicon-search">D</button></span></li>
+                            <li class="list-group-item"><label><input type="checkbox" class="cb">스크롤바 만들기</label><span class="btn-group1"><button class="btn glyphicon glyphicon-search">E</button ><button class="btn glyphicon glyphicon-search">D</button></span></li>
                         </ul>
                     </div>
-                    <div class="div_blank col-md-2 text-right"></div>
-                    <div class="div_done col-md-5 text-right">
+                    <div class="div_done col-md-6 text-right">
                         <h3 class="done-title">DONE</h3>
                         <hr class="mb-4">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group"><label><input type="checkbox">계산기 만들기</label><button class="edit">e</button><button class="delete">d</button></li>
+                            <li class="list-group-item"><label><input type="checkbox">계산기 만들기</label><span class="btn-group" aria-hidden="true"><button class="btn glyphicon glyphicon-search">E</button ><button class="btn glyphicon glyphicon-search">D</button></span></li>
                         </ul>
                     </div>
             </div>
@@ -87,19 +96,13 @@
         
 
     <script>
-        function 
-
-            
-        }
-
-        function edit(){
-            
-        }
-
-        function del(){
-
-        }
-
+       function newTask() {
+           var li = document.createElement("li");
+           var inputValue = document.getElementById("inputTask").value;
+           if (inputValue){
+               document.getElementById("Ul").appendChild(li)
+           }
+       }
     </script>
 
     
